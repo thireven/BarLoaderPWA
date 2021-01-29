@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Bar Loader</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="vendor/cash.min.js"></script>
   </head>
   <body>
     <div id="container">
-      
+      <div id="info-container">Loaded: 120kg (234.4 lbs)</div>
+      <div id="weight-graphics-container">
+        <div id="bar"></div>
+      </div>
+      <div id="buttons-container">
+        <ul id="buttons-list">
+          <li><button class="weight-btn" data-weight="50"></button></li>
+          <li><button class="weight-btn" data-weight="25"></button></li>
+          <li><button class="weight-btn" data-weight="20"></button></li>
+          <li><button class="weight-btn" data-weight="15"></button></li>
+          <li><button class="weight-btn" data-weight="10"></button></li>
+          <li><button class="weight-btn" data-weight="5"></button></li>
+          <li><button class="weight-btn" data-weight="2.5"></button></li>
+          <li><button class="weight-btn" data-weight="1.25"></button></li>
+          <li><button id="reset-btn">Reset Bar</button></li>
+        </ul>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
