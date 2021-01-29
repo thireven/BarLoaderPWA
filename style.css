@@ -1,30 +1,51 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, 
+             -apple-system, BlinkMacSystemFont, 
+             "Segoe UI", 
+             "Roboto", 
+             "Oxygen", 
+             "Ubuntu", 
+             "Cantarell", 
+             "Fira Sans", 
+             "Droid Sans", 
+             "Helvetica Neue", 
+             Arial, sans-serif;
 }
 
 #container {
   width: 100%;
-  height: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
+#info-container {
+  padding: 10px 0;
+  font-size: 1.5em;
+  
+}
+
 #weight-graphics-container {
-  flex: 1;
+  height: 250px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 #bar {
-  height: 80px;
+  height: 25px;
   background: black;
   width: 300px;
 }
 
 #buttons-list {
   margin: 0;
+  padding: 0;
   list-style-type: none;
   vertical-align: top;
 }
@@ -32,9 +53,10 @@ html, body {
 #buttons-list li {
   display: inline-block;
   vertical-align: top;
+  margin: 10px;
 }
 
-#buttons-list li button {
+#buttons-list li .weight-btn, #reset-btn {
   font-weight: bold;
   padding: 5px 10px;
   font-size: 1.5em;
@@ -43,4 +65,77 @@ html, body {
   color: #fff;
   -webkit-text-stroke: 1px black;
   /* -webkit-text-fill-color: white; */
+}
+
+#weights-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#weights-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#weights-list li {
+  display: flex;
+  align-items: center;
+}
+
+.weight-notch {
+  background: #000000;
+  width: 20px;
+  height: 60px;
+}
+
+.weight-disc {
+  width: 15px;
+  height: 100%;
+  border: 1px solid #6b6b6b;
+  
+}
+
+.weight-disc[data-weight="50"] {
+  background: linear-gradient(0deg, #188034 25%, #ffffff 50%, #188034 75%);
+}
+
+.weight-disc[data-weight="25"] {
+  background: linear-gradient(0deg, #c42121 25%, #ffffff 50%, #c42121 75%);
+}
+
+.weight-disc[data-weight="20"] {
+  background: linear-gradient(0deg, #213cc4 25%, #ffffff 50%, #213cc4 75%);
+}
+
+.weight-disc[data-weight="15"] {
+  background: linear-gradient(0deg, #f5f525 25%, #ffffff 50%, #f5f525 75%);
+  height: calc(100% - 35px);
+}
+
+.weight-disc[data-weight="10"] {
+  background: linear-gradient(0deg, #1adb41 25%, #ffffff 50%, #1adb41 75%);
+  height: calc(100% - 80px);
+}
+
+.weight-disc[data-weight="5"] {
+  background: linear-gradient(0deg, #ffffff 25%, #ffffff 50%, #ffffff 75%);
+  height: calc(100% - 105px);
+}
+
+.weight-disc[data-weight="2.5"] {
+  background: linear-gradient(0deg, #000000 25%, #ffffff 50%, #000000 75%);
+  height: calc(100% - 130px);
+}
+
+.weight-disc[data-weight="1.25"] {
+  background: linear-gradient(0deg, #c4c4c4 25%, #ffffff 50%, #c4c4c4 75%);
+  height: calc(100% - 155px);
 }
