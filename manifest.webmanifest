@@ -3,12 +3,12 @@
   "name": "Bar Loader",
   "icons": [
     {
-      "src": "/images/test_192.png",
+      "src": "/images/barloader_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/test_512.png",
+      "src": "/images/barloder_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
