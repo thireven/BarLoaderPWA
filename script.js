@@ -21,7 +21,7 @@ const weightMap = {
 const display = {
   kg: $('#info-weight-kg'),
   lbs: $('#info-weight-lbs'),
-} 
+}
 
 let currentWeight = 20;
 
@@ -32,24 +32,31 @@ weightButtons.each(btn => {
   const button = $(btn);
   const weight = button.data('weight');
   const weightData = weightMap[weight];
-  
+
   button.css('background', weightData.color);
   button.html(weight + 'kg');
 });
 
 weightButtons.on('click', e => {
   const weight = $(e.target).data('weight');
-  
-  $(weightList).append(`<li class="removable"><div class="weight-disc" data-weight="${weight}"></div></li>`);
-  
+
+  $(weightList).append(`<li class="weight-disc-li removable"><div class="weight-disc" data-weight="${weight}"></div></li>`);
+
   currentWeight += parseFloat(weight) * 2;
-  
+
   updateWeightInfoDisplay();
 });
 
 $('#reset-btn').on('click', function() {
   currentWeight = 20;
   updateWeightInfoDisplay();
-  
+
   $('#weights-list li.removable').remove();
+});
+
+const draggable = window.Draggable;
+
+const weightContainer = document.querySelector('#weights-list');
+const sortable = new draggable.Sortable(weightContainer, {
+  draggable: '.weight-disc-li'
 });

@@ -4,16 +4,16 @@ html, body {
   font-size: 16px;
   width: 100%;
   height: 100%;
-  font-family: system-ui, 
-             -apple-system, BlinkMacSystemFont, 
-             "Segoe UI", 
-             "Roboto", 
-             "Oxygen", 
-             "Ubuntu", 
-             "Cantarell", 
-             "Fira Sans", 
-             "Droid Sans", 
-             "Helvetica Neue", 
+  font-family: system-ui,
+             -apple-system, BlinkMacSystemFont,
+             "Segoe UI",
+             "Roboto",
+             "Oxygen",
+             "Ubuntu",
+             "Cantarell",
+             "Fira Sans",
+             "Droid Sans",
+             "Helvetica Neue",
              Arial, sans-serif;
 }
 
@@ -27,7 +27,7 @@ html, body {
 #info-container {
   padding: 10px 0;
   font-size: 1.5em;
-  
+
 }
 
 #weight-graphics-container {
@@ -100,7 +100,7 @@ html, body {
   width: 15px;
   height: 100%;
   border: 1px solid #6b6b6b;
-  
+
 }
 
 .weight-disc[data-weight="50"] {
