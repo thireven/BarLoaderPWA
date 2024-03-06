@@ -32,6 +32,7 @@ html, body {
 
 #weight-graphics-container {
   height: 250px;
+  width: 300px;
   display: flex;
   align-items: center;
   position: relative;
@@ -40,7 +41,7 @@ html, body {
 #bar {
   height: 25px;
   background: black;
-  width: 300px;
+  width: 100%;
 }
 
 #buttons-list {
@@ -83,6 +84,7 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 #weights-list li {

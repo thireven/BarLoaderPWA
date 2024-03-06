@@ -55,8 +55,34 @@ $('#reset-btn').on('click', function() {
 });
 
 const draggable = window.Draggable;
+let targetIndex = -1;
+let stoppedOutside = false;
 
 const weightContainer = document.querySelector('#weights-list');
 const sortable = new draggable.Sortable(weightContainer, {
-  draggable: '.weight-disc-li'
+  draggable: '.weight-disc-li',
+  mirror: {
+    appendTo: weightContainer,
+    constrainDimensions: true,
+  },
 });
+
+sortable.on('drag:out:container', () => {
+  stoppedOutside = true;
+});
+
+sortable.on('drag:stopped', (e) => {
+  if (stoppedOutside) {
+    const items = document.querySelectorAll('.weight-disc-li');
+    items[targetIndex].remove();
+  }
+
+  stoppedOutside = false;
+  targetIndex = -1;
+});
+
+
+
+sortable.on('sortable:stop', (e) => {
+  targetIndex = e.newIndex;
+})
